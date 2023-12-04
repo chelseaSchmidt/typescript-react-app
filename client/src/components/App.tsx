@@ -1,8 +1,9 @@
 import 'styles/main.css';
+import { Label } from 'src/constants';
 
 const App = () => {
   return (
-    <h1>App</h1>
+    <div role="heading" aria-level={1}>{Label.App}</div>
   );
 };
 

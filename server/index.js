@@ -3,13 +3,15 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 
-const server = express();
-const port = process.env.PORT || 3000;
-const isProd = process.env.MODE === 'prod';
-const publicDir = path.resolve(__dirname, '..', 'client', 'public');
+const PORT = process.env.PORT || 3000;
+const HOME_URL = `http://localhost:${PORT}`;
 
-console.log({ port, isProd, publicDir });
+const isProd = process.env.MODE === 'prod';
+const startupMessage = `Listening at ${HOME_URL} in ${isProd ? 'production' : 'development'} mode`;
+
+const server = express();
 
 server.use(morgan(isProd ? 'tiny' : 'dev'));
-server.use(express.static(publicDir));
-server.listen(port, () => console.log(`Listening at http://localhost:${port}`));
+server.use(express.static(path.resolve(__dirname, '..', 'client', 'public')));
+
+server.listen(PORT, () => console.log(startupMessage));
