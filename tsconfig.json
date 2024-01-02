@@ -1,15 +1,12 @@
 {
   "include": [
-    "client/**/*",
-    "server/**/*",
-    "tests/**/*",
-    "__mocks__/**/*",
-    ".eslintrc.cjs",
-    "*.js",
+    "client/src/**/*",
+    "__mocks__/**/*.ts",
+    "tests/client/src/**/*",
+    "tests/client/.eslintrc.cjs",
+    "tests/__mocks__/**/*.ts",
+    "client/.eslintrc.cjs",
     "*.ts"
-  ],
-  "exclude": [
-    "tests/coverage/**/*"
   ],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
