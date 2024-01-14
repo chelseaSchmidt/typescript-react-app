@@ -1,10 +1,7 @@
-/* eslint-env node */
-
 module.exports = {
   env: {
     browser: true,
     es6: true,
-    jest: true,
   },
   extends: [
     'eslint:recommended',
@@ -15,31 +12,28 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: '../tsconfig.json',
+    // https://typescript-eslint.io/packages/parser/#configuration
+    project: './tsconfig.eslint.json',
     tsconfigRootDir: __dirname,
     ecmaVersion: 'latest',
-    sourceType: 'module',
-    ecmaFeatures: { jsx: true },
   },
-  plugins: ['@typescript-eslint', 'react', 'import'],
+  plugins: [
+    '@typescript-eslint',
+    'react',
+  ],
   root: true,
   ignorePatterns: [
     'public',
     'node_modules',
+    'styles',
   ],
-  settings: {
-    'import/resolver': {
-      typescript: true,
-    },
-  },
   rules: {
     'arrow-body-style': 'off',
     'no-console': 'off',
+    'no-unused-vars': 'off',
     'sort-imports': [
       'error',
       {
@@ -50,8 +44,6 @@ module.exports = {
         allowSeparatedGroups: true,
       },
     ],
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'import/no-unresolved': 'error',
     'jsx-a11y/label-has-associated-control': [
       'error',
       {

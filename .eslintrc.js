@@ -1,5 +1,3 @@
-/* eslint-env node */
-
 module.exports = {
   env: {
     node: true,
@@ -9,7 +7,6 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'airbnb',
-    'airbnb/hooks',
     'plugin:import/recommended',
   ],
   parserOptions: {
@@ -24,6 +21,8 @@ module.exports = {
     'dist',
     'tests/coverage',
     'tests/client',
+    'tests/__mocks__/*.ts',
+    'tests/__mocks__/*.tsx',
   ],
   settings: {
     'import/resolver': {
