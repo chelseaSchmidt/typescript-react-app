@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    // https://github.com/kulshekhar/ts-jest/issues/4198
+    // https://github.com/kulshekhar/ts-jest/issues/4207
+    "module": "ESNext",
+    "moduleResolution": "node",
+  },
+}
