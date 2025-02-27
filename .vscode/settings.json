@@ -3,6 +3,7 @@
   "editor.renderWhitespace": "all",
   "files.trimTrailingWhitespace": true,
 
+  "eslint.enable": true,
   "eslint.format.enable": true,
   "eslint.validate": ["javascript", "typescript"],
   "editor.codeActionsOnSave": {

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 /** @jest-environment node */
 
 ['path'].forEach((module) => jest.mock(module));
