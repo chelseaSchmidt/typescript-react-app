@@ -1,4 +1,3 @@
-/* eslint-disable global-require */
 /** @jest-environment node */
 
 ['path'].forEach((module) => jest.mock(module));

@@ -1,4 +1,3 @@
-/* eslint-disable global-require */
 import '@testing-library/jest-dom';
 
 describe('client', () => {
