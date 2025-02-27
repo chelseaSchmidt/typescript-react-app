@@ -25,6 +25,3 @@
 
 ## Testing
 - `npm test`
-
-## Linting
-- `npm run lint`
